@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Vehicle Registration Form</h2>
+        <form id="vehicleForm" onsubmit="return validateForm()">
+            <label for="owner">Owner's Name:</label>
+            <input type="text" id="owner" name="owner">
+
+            <label for="reg_number">Vehicle Registration Number:</label>
+            <input type="text" id="reg_number" name="reg_number">
+
+            <label for="engine_number">Engine Number:</label>
+            <input type="text" id="engine_number" name="engine_number">
+
+            <label for="cc">CC (Cubic Capacity):</label>
+            <input type="number" id="cc" name="cc">
+
+            <label for="district">Select District:</label>
+            <select id="district" name="district">
+                <option value="">--Select District--</option>
+                <option value="dhaka">Dhaka</option>
+                <option value="chattogram">Chattogram</option>
+                <option value="rajshahi">Rajshahi</option>
+                <option value="khulna">Khulna</option>
+            </select>
+
+            <label for="vehicle_type">Type of Vehicle:</label>
+            <div class="radio-group">
+                <input type="radio" id="car" name="vehicle_type" value="Car">
+                <label for="car">Car</label>
+
+                <input type="radio" id="motorcycle" name="vehicle_type" value="Motorcycle">
+                <label for="motorcycle">Motorcycle</label>
+
+                <input type="radio" id="truck" name="vehicle_type" value="Truck">
+                <label for="truck">Truck</label>
+            </div>
+
+            <label for="details">Additional Details:</label>
+            <textarea id="details" name="details" rows="4" placeholder="Enter additional information here..."></textarea>
+
+            <button type="submit">Submit</button>
+            <p id="error-message" class="error-message"></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
